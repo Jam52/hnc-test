@@ -18,12 +18,7 @@ export default function Home() {
   );
 
   function logIn() {
-    if (
-      (input.name !== undefined) & (input.email !== undefined) &&
-      input.password !== undefined
-    ) {
-      router.push('/main');
-    }
+    router.push('/main');
   }
 
   function validateInput(input) {
