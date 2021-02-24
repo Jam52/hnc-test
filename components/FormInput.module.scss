@@ -1,0 +1,29 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  label {
+    margin-bottom: 0.1rem;
+    color: #353b48;
+  }
+  input {
+    padding: 1rem 0.5rem;
+    background-color: none;
+    border: none;
+  }
+
+  &_error {
+    input {
+      border: 2px solid red;
+    }
+  }
+}
+
+.errorMsg {
+  font-size: 0.8rem;
+  color: rgb(184, 48, 48);
+  font-style: italic;
+  bottom: -1rem;
+  right: 0;
+  margin: 0;
+}

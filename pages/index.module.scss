@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto+Slab:wght@500&display=swap');
+$font-title: 'Roboto Slab', serif;
+$font-main: 'Raleway', sans-serif;
+
+.container {
+  padding: 1rem;
+  font-family: $font-main;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+}
+
+.form {
+  padding: 3rem;
+  background-image: linear-gradient(30deg, white, #e6e8ee, white);
+  box-shadow: inset 0 0 10px #dcdde1;
+  border-radius: 1rem;
+  border: 1px solid #dcdde1;
+
+  legend {
+    font-family: $font-title;
+    font-size: 1.3rem;
+    color: #273c75;
+  }
+
+  feildset > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.header {
+  color: #273c75;
+  font-family: $font-title;
+  text-align: center;
+  font-size: 3rem;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 80vw;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+.submit {
+  font-family: $font-title;
+  margin-top: 2rem;
+  padding: 1em 3em;
+  border-radius: 0.3rem;
+  background: #273c75;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
