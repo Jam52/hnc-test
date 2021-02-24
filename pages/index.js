@@ -2,15 +2,28 @@ import Head from 'next/head';
 import styles from './index.module.scss';
 import useForm from '../lib/useForm';
 import FormInput from '../components/FormInput';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch('/main');
+  });
+
   const { input, handleChange, handleSubmit, errors } = useForm(
     logIn,
     validateInput,
   );
 
   function logIn() {
-    console.log(input);
+    if (
+      (input.name !== undefined) & (input.email !== undefined) &&
+      input.password !== undefined
+    ) {
+      router.push('/main');
+    }
   }
 
   function validateInput(input) {
