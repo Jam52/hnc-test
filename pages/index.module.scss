@@ -4,7 +4,7 @@ $font-main: 'Raleway', sans-serif;
 
 /* utility classes */
 .container {
-  padding: 1rem;
+  padding: 2rem;
   font-family: $font-main;
   line-height: 1.6;
   letter-spacing: 0.05rem;
@@ -13,6 +13,13 @@ $font-main: 'Raleway', sans-serif;
 .split {
   display: flex;
   gap: 2rem;
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .split {
+    flex-direction: row;
+  }
 }
 
 /* Form styling */
@@ -85,22 +92,37 @@ $font-main: 'Raleway', sans-serif;
   display: flex;
 }
 
+.parallaxImageContent {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 350%;
+}
+
 .front {
-  object-fit: cover;
+  @extend .parallaxImageContent;
+  background-image: url('/images/mountainMan.svg');
+  background-position: 70% 100%;
 }
 
 .middle {
-  transform: translateZ(-1px) scale(1.6) translateY(2rem);
+  @extend .parallaxImageContent;
+  transform: translateZ(-1px) scale(1.6);
   filter: invert(55%) sepia(100%) saturate(500%) hue-rotate(345deg)
     brightness(80%) contrast(88%);
-  object-fit: cover;
+  background-image: url('/images/mountainFg.svg');
 }
 
 .back {
-  transform: translateZ(-2px) scale(2.4);
+  @extend .parallaxImageContent;
+  transform: translateZ(-2px) scale(2);
   filter: invert(81%) sepia(100%) saturate(1000%) hue-rotate(305deg)
     brightness(100%) contrast(101%);
-  object-fit: cover;
+  background-image: url('/images/mountainBg.svg');
 }
 
 .static {
@@ -114,5 +136,15 @@ $font-main: 'Raleway', sans-serif;
   z-index: 2;
   h2 {
     color: #f39c12;
+  }
+}
+
+@media (min-width: 1000px) {
+  .parallaxImageContent {
+    background-size: 100%;
+  }
+
+  .front {
+    background-position: 50% 100%;
   }
 }

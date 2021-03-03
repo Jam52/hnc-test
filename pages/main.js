@@ -14,21 +14,9 @@ const Main = () => {
         <div className={styles.container}>
           <h1>Ever Higher</h1>
         </div>
-        <Image
-          src="/images/mountainBg.svg"
-          layout="fill"
-          className={styles.back}
-        />
-        <Image
-          src="/images/mountainFg.svg"
-          layout="fill"
-          className={styles.middle}
-        />
-        <Image
-          src="/images/mountainMan.svg"
-          layout="fill"
-          className={styles.front}
-        />
+        <div className={styles.back} />
+        <div className={styles.middle} />
+        <div className={styles.front} />
       </div>
       <div className={styles.static}>
         <div className={styles.container}>
