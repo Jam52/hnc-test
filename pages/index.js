@@ -50,6 +50,7 @@ export default function Home() {
       <Head>
         <title>hcn test</title>
         <link rel="icon" href="/favicon.ico" />
+        <style>{`body {margin: 0;}`}</style>
       </Head>
 
       <header>
