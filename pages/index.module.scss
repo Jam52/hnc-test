@@ -82,39 +82,25 @@ $font-main: 'Raleway', sans-serif;
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
-}
-
-.parallaxContent {
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-size: 100%;
+  display: flex;
 }
 
 .front {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateY(8rem);
+  object-fit: cover;
 }
 
 .middle {
-  @extend .parallaxContent;
   transform: translateZ(-1px) scale(1.6) translateY(2rem);
   filter: invert(55%) sepia(100%) saturate(500%) hue-rotate(345deg)
     brightness(80%) contrast(88%);
+  object-fit: cover;
 }
 
 .back {
-  @extend .parallaxContent;
   transform: translateZ(-2px) scale(2.4);
   filter: invert(81%) sepia(100%) saturate(1000%) hue-rotate(305deg)
     brightness(100%) contrast(101%);
+  object-fit: cover;
 }
 
 .static {
